@@ -23,6 +23,9 @@ const Agence = () => {
   '/Images/8.jpg',
   '/Images/9.jpg',
   '/Images/10.jpg',
+  '/Images/8.jpg',
+  '/Images/9.jpg',
+  '/Images/1.jpg',
 ];
 
 
@@ -37,6 +40,11 @@ const Agence = () => {
         end: 'top -120%',
         scrub: true,
         pin: true,
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: 'transform',
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
         onUpdate: function(elem){
           let ImageIndex;
           if(elem.progress <1){
@@ -53,8 +61,8 @@ const Agence = () => {
   })
   return (
     <div>
-      <div className="section1">
-        <div ref={imageDivref} className="absolute h-[18vw] w-[14vw] rounded-3xl overflow-hidden  top-40 left-[68vh]">
+      <div className="section1 relative py-1">
+        <div ref={imageDivref} className="absolute h-[18vw] w-[14vw] rounded-3xl overflow-hidden  top-28 left-[68vh]">
           <img
             ref={imageRef}
             className="h-full w-full object-cover"
